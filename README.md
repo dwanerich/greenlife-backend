@@ -1,5 +1,7 @@
 # README
 
+this project is based on user being able to upload a plant http image and give the image a mood by clicking an emoji of 3.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
