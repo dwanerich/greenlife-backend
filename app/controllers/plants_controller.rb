@@ -6,25 +6,25 @@ class PlantsController < ApplicationController
     end
 
     def show
-        @plant = Plant.find([:id])
+        @plant = Plant.find_by(id: params[:id])
         render json: @plant
     end
 
     def create
-        @plant = Plant.new([:plant_params])
+        plant = Plant.create(name: params[:name], img_src: params[:img_src], caption: params[:caption])
 
-    end
-
-    def update
-        @plant = Plant.find([:id])
+        if plant.valid?
+            render json: plant
+        else
+            render json: {errors: "plant sad rhymes with data bad!" }
+        end
 
     end
 
     def destroy
-        @plant = Plant.find([:id])
+        plant = Plant.find_by(id: params[:id])
         plant.destroy
 
-    end
-
-    
+        render json: { message: "plant more seeds, kill less tress asshole" }
+  end
 end
