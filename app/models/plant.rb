@@ -1,5 +1,6 @@
 class Plant < ApplicationRecord
-    has_many :reactions
+    has_many :moods
 
     validates :name, presence: true
+    validates :img_src, presence: true
 end

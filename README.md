@@ -1,6 +1,7 @@
 # README
 
-this project is based on user being able to upload a plant http://image name it give it a mood/moods upon clicking 3 provided emojis. User should be able to togggle each reaction. User should be able to edit, delete &  update plant as well.
+this project is based on user being able to upload a plant image http, name & caption.
+3 mood options are present. happy sad, thirsty. if you click sad more than 3x it's assumed the plant is on death row & is donated to the trashbin. if if thirsty is clicked more than 3x you're alerted "you're drowning me, please no more. Happiness can be clicked unlimited amout of times without any consequence.
 
 steps to developing this app
 
@@ -8,17 +9,16 @@ steps to developing this app
 // build out a reaction class
 // establish & understand nodes in index.HTML file
 // addeventlisteners to all buttons & forms etc..
+// add event handlers
 // create a render plants function
 // create new plant function
 // render new plant
-// edit plant
 // delete plant
 // react to plant with 3 options
 // function newPlant {}
 // function renderPlant {}
 // funtion renderPlants {}
 // function plantReaction {}
-// function editPlant {}
 // fucntion deletePlant {}
 
 

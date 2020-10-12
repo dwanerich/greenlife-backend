@@ -11,7 +11,7 @@ class PlantsController < ApplicationController
     end
 
     def create
-        plant = Plant.create(name: params[:name], img_src: params[:img_src], caption: params[:caption])
+        plant = Plant.create(name: params[:name], img_src: params[:img_src])
 
         if plant.valid?
             render json: plant
