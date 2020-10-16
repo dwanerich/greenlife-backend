@@ -11,7 +11,7 @@ class PlantsController < ApplicationController
     end
 
     def create
-        plant = Plant.create(name: params[:name], img_src: params[:img_src])
+        plant = Plant.create(name: params[:name], img_src: params[:img_src], user_id: params[:user_id])
 
         if plant.valid?
             render json: plant
@@ -25,6 +25,6 @@ class PlantsController < ApplicationController
         plant = Plant.find_by(id: params[:id])
         plant.destroy
 
-        render json: { message: "plant more seeds, kill less tress asshole" }
+        render json: {message: "plant more seeds, kill less tress asshole" }
   end
 end

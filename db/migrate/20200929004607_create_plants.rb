@@ -3,6 +3,7 @@ class CreatePlants < ActiveRecord::Migration[6.0]
     create_table :plants do |t|
       t.string :img_src
       t.string :name
+      t.belongs_to :user
       t.timestamps
     end
   end
