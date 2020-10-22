@@ -1,12 +1,11 @@
 # README
 
 this project is based on user being able to upload a plant image http, name & caption.
-3 mood options are present. happy sad, thirsty. if you click sad more than 3x it's assumed the plant is on death row & is donated to the trashbin. if if thirsty is clicked more than 3x you're alerted "you're drowning me, please no more. Happiness can be clicked unlimited amout of times without any consequence.
+either plant is happy or sad. if you click sad more than 3x it's assumed the plant is on death row & is donated to the trashbin. if plant score is greater that 0 plant is still doing well.
 
 steps to developing this app
 
 // build out a plant class
-// build out a reaction class
 // establish & understand nodes in index.HTML file
 // addeventlisteners to all buttons & forms etc..
 // add event handlers

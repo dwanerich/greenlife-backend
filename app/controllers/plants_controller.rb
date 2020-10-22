@@ -11,13 +11,16 @@ class PlantsController < ApplicationController
     end
 
     def create
-        plant = Plant.create(name: params[:name], img_src: params[:img_src], user_id: params[:user_id])
+        plant = Plant.create(name: params[:name], img_src: params[:img_src], user_id: User.last.id)
+        
 
         if plant.valid?
             render json: plant
         else
             render json: {errors: "plant sad rhymes with data bad!" }
         end
+
+        # users.plants.all.size > 3 = false
 
     end
 
@@ -26,5 +29,5 @@ class PlantsController < ApplicationController
         plant.destroy
 
         render json: {message: "plant more seeds, kill less tress asshole" }
-  end
+    end
 end

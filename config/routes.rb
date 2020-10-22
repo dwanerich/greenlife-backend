@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  resources :users
   resources :reactions
   resources :plants
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
+  devise_scope :user do
+  get "/users/current-user-id" => "users/registrations#current_user_id"
+  post "/users/sign-out" => "users/sessions#destroy"
+
+  end
 end
