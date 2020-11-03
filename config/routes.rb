@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reactions
+  # resources :reactions
   resources :plants
 
   devise_for :users, controllers: {
